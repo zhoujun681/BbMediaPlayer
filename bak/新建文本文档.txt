@@ -1,0 +1,107 @@
+// IMusicPlayerService.aidl
+package com.example.bbmediaplayer;
+
+// Declare any non-default types here with import statements
+
+interface IMusicPlayerService {
+    /**
+     * Demonstrates some basic types that you can use as parameters
+     * and return values in AIDL.
+     */
+    void basicTypes(int anInt, long aLong, boolean aBoolean, float aFloat,
+            double aDouble, String aString);
+            
+
+    /**
+     * 打开音乐
+     *
+     * @param position
+     */
+     void openAudio(int position);
+
+    /**
+     * 开始播放
+     */
+     void start();
+
+    /**
+     * 暂停
+     */
+     void pause();
+
+    /**
+     * 停止
+     */
+     void stop();
+
+    /**
+     * 得到当前播放进度
+     *
+     * @return
+     */
+     int getCurrentPosition();
+
+    /**
+     * 得到当前播放总长度
+     *
+     * @return
+     */
+     int getCurrentDuration();
+
+    /**
+     * 得到演唱者
+     *
+     * @return
+     */
+     String getArtist();
+
+    /**
+     * 得到歌曲名
+     *
+     * @return
+     */
+     String getName();
+
+    /**
+     * 得到歌曲路径
+     *
+     * @return
+     */
+     String getAudioPath();
+
+    /**
+     * 上一曲
+     */
+     void pre();
+
+    /**
+     * 下一曲
+     */
+     void next();
+
+    /**
+     * 设置播放模式
+     *
+     * @param playmode
+     */
+     void setPlayMode(int playmode);
+
+    /**
+     * 得到播放模式
+     * @return
+     */
+     int getPlayMode();
+    /**
+     * 获取媒体是否在播放
+     * @return
+     */
+     boolean isPlaying();
+     /**
+     * 跳转到进度
+     **/
+     void seekTo(int position);
+     /**
+     *得到音频文件的SessionId
+     **/
+     int getAudioSessionId();
+}
